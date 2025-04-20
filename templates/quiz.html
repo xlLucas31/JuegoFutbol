@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Fútbol Quiz</title>
+</head>
+<body>
+    <h1>Quiz de Fútbol</h1>
+    <div id="question-container">
+        <!-- Aquí se insertarán las preguntas mediante JavaScript -->
+    </div>
+    <script>
+        fetch('/get_question')
+            .then(response => response.json())
+            .then(data => {
+                const questionContainer = document.getElementById('question-container');
+                questionContainer.innerHTML = `
+                    <h2>${data.question}</h2>
+                    <ul>
+                        ${data.options.map(option => `<li>${option}</li>`).join('')}
+                    </ul>
+                `;
+            });
+    </script>
+</body>
+</html>

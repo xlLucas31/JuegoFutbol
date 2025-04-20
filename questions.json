@@ -1,0 +1,12 @@
+[
+    {
+        "question": "¿Quién ganó la Copa Mundial de Fútbol 2018?",
+        "options": ["Alemania", "Brasil", "Francia", "Argentina"],
+        "answer": "Francia"
+    },
+    {
+        "question": "¿Cuál es el máximo goleador en la historia de la Champions League?",
+        "options": ["Cristiano Ronaldo", "Lionel Messi", "Raúl", "Robert Lewandowski"],
+        "answer": "Cristiano Ronaldo"
+    }
+]
